@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF4B70F5</color> <!-- Warna latar belakang toolbar -->
+    <color name="colorPrimaryDark">#FFE0A600</color> <!-- Warna yang lebih gelap untuk status bar -->
+    <color name="colorAccent">#FFF3B94E</color> <!-- Warna aksen -->
+    <color name="toolbarTextColor">#FFFFFF</color> <!-- Warna teks hitam -->
+    <color name="toolbarIconColor">#000000</color> <!-- Warna ikon hitam -->
+</resources>

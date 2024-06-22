@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "384980735206",
+    "project_id": "finalwais",
+    "storage_bucket": "finalwais.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384980735206:android:dd2c6e981122533cf4d727",
+        "android_client_info": {
+          "package_name": "com.example.final_wais"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz2WLdA8e8LDDBhkWGzeRMaZLsMCrU2RM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
