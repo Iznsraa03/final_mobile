@@ -13,9 +13,15 @@ import java.util.List;
 public class Adapter extends RecyclerView.Adapter<Adapter.MahasiswaViewHolder> {
 
     private List<Mahasiswa> mahasiswaList;
+    private OnItemClickListener onItemClickListener;
 
-    public Adapter(List<Mahasiswa> mahasiswaList) {
+    public interface OnItemClickListener {
+        void onItemClick(Mahasiswa mahasiswa);
+    }
+
+    public Adapter(List<Mahasiswa> mahasiswaList, OnItemClickListener onItemClickListener) {
         this.mahasiswaList = mahasiswaList;
+        this.onItemClickListener = onItemClickListener;
     }
 
     @NonNull
@@ -31,6 +37,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MahasiswaViewHolder> {
         holder.namaTextView.setText(mahasiswa.getNama());
         holder.nimTextView.setText(mahasiswa.getNim());
         holder.jurusanTextView.setText(mahasiswa.getJurusan());
+        holder.bind(mahasiswa, onItemClickListener);
     }
 
     @Override
@@ -48,6 +55,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MahasiswaViewHolder> {
             namaTextView = itemView.findViewById(R.id.namaTextView);
             nimTextView = itemView.findViewById(R.id.nimTextView);
             jurusanTextView = itemView.findViewById(R.id.jurusanTextView);
+        }
+
+        public void bind(final Mahasiswa mahasiswa, final OnItemClickListener listener) {
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(mahasiswa);
+                }
+            });
         }
     }
 }

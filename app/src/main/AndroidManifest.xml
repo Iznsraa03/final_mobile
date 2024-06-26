@@ -18,6 +18,9 @@
             android:name=".TambahData"
             android:exported="true" />
         <activity
+            android:name=".UpdateData"
+            android:exported="true" />
+        <activity
             android:name=".RegistPage"
             android:exported="true" />
         <activity
